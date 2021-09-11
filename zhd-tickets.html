@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">        
+        <title>Tickets</title>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="styles/style.css">
+        <link rel="stylesheet" type="text/css" href="styles/media.css">
+        <script type="text/javascript" src="script/script.js" defer></script>
+    </head>
+    
+    <body>
+        <div class="container">
+            <div class="background light">
+                <header>
+                    <a href="index.html" class="logo_link">
+                        <img src="images/icons/logo.svg">
+                    </a>
+                    <nav class="header-buttons account">
+                        <a href="user-profile.html" class="btn account-btn">
+                            <img src="images/icons/account but.svg">
+                        </a>
+                        <a href="#" class="menu"><img src="images/icons/menu dark.svg" onclick="menuPress()"></a>
+                        <div class="menu-block">
+                            <a href="#" class="close-btn" onclick="menuPress()">&times;</a>
+                            <a href="#" class="menu-btn">Авіаквитки</a>
+                            <a href="#" class="menu-btn">Залізничні квитки</a>
+                            <a href="#" class="menu-btn">Автобуси</a>
+                            <a href="#" class="menu-btn">Готелі</a>
+                            <a href="user-profile.html" class="btn account-btn inside_menu">
+                                <img src="images/icons/account but.svg">
+                            </a>
+                        </div>
+                    </nav>
+                </header>
+
+                <main>
+                    <div class="tickets-info">
+                        <img src="images/icons/zhd.svg">
+                        <div class="search-info">
+                            <span>Київ-Пасажирський → Львів</span>
+                            <span>19.11.2020</span>
+                        </div>
+                        <a href="#" class="change-search-btn">Змінити умови пошуку</a>
+                    </div>
+                    <div class="background dark">
+                        <div class="tickets-table">
+                            <div>Поїзд</div>
+                            <div>Відправлення</div>
+                            <div>В дорозі</div>
+                            <div>Прибуття</div>
+                            <div>Доступні місця</div>
+                        </div>
+                        <div class="tickets">
+                            <div class="ticket-zhd">
+                                <img src="images/icons/ukrzaliz.svg">
+                                <div class="ticket-zhd-info">
+                                    <div>715К ІНТЕРСІТІ+</div>
+                                    <div class="ticket-small">Київ-Пасажирський → Львів</div>
+                                    <a href="#" class="change-search-btn route">Маршрут поїзда</a>
+                                </div>
+                                <div class="ticket-time-date">
+                                    <div>06:50</div>
+                                    <div class="ticket-small">19.11.20</div>
+                                </div>
+                                <div class="ticket-timeline">
+                                    <span>6 год. 55 хв.</span>
+                                </div>
+                                <div class="ticket-time-date">
+                                    <div>13:45</div>
+                                    <div class="ticket-small">19.11.20</div>
+                                </div>
+                                <div class="ticket-zhd-price">Від ₴ 375</div>
+                                <div class="ticket-zhd-type">Сидячий</div>
+                                <a href="#" class="ticket-choose-btn">Вибрати</a>
+                            </div>
+                            <div class="ticket-zhd">
+                                <img src="images/icons/ukrzaliz.svg">
+                                <div class="ticket-zhd-info">
+                                    <div>715К ІНТЕРСІТІ+</div>
+                                    <div class="ticket-small">Київ-Пасажирський → Львів</div>
+                                    <a href="#" class="change-search-btn route">Маршрут поїзда</a>
+                                </div>
+                                <div class="ticket-time-date">
+                                    <div>06:50</div>
+                                    <div class="ticket-small">19.11.20</div>
+                                </div>
+                                <div class="ticket-timeline">
+                                    <span>6 год. 55 хв.</span>
+                                </div>
+                                <div class="ticket-time-date">
+                                    <div>13:45</div>
+                                    <div class="ticket-small">19.11.20</div>
+                                </div>
+                                <div class="ticket-zhd-price">Від ₴ 375</div>
+                                <div class="ticket-zhd-type">Сидячий</div>
+                                <a href="#" class="ticket-choose-btn">Вибрати</a>
+                            </div>
+                            <div class="ticket-zhd">
+                                <img src="images/icons/ukrzaliz.svg">
+                                <div class="ticket-zhd-info">
+                                    <div>715К ІНТЕРСІТІ+</div>
+                                    <div class="ticket-small">Київ-Пасажирський → Львів</div>
+                                    <a href="#" class="change-search-btn route">Маршрут поїзда</a>
+                                </div>
+                                <div class="ticket-time-date">
+                                    <div>06:50</div>
+                                    <div class="ticket-small">19.11.20</div>
+                                </div>
+                                <div class="ticket-timeline">
+                                    <span>6 год. 55 хв.</span>
+                                </div>
+                                <div class="ticket-time-date">
+                                    <div>13:45</div>
+                                    <div class="ticket-small">19.11.20</div>
+                                </div>
+                                <div class="ticket-zhd-price">Від ₴ 375</div>
+                                <div class="ticket-zhd-type">Сидячий</div>
+                                <a href="#" class="ticket-choose-btn">Вибрати</a>
+                            </div>
+                            <div class="ticket-zhd">
+                                <img src="images/icons/ukrzaliz.svg">
+                                <div class="ticket-zhd-info">
+                                    <div>715К ІНТЕРСІТІ+</div>
+                                    <div class="ticket-small">Київ-Пасажирський → Львів</div>
+                                    <a href="#" class="change-search-btn route">Маршрут поїзда</a>
+                                </div>
+                                <div class="ticket-time-date">
+                                    <div>06:50</div>
+                                    <div class="ticket-small">19.11.20</div>
+                                </div>
+                                <div class="ticket-timeline">
+                                    <span>6 год. 55 хв.</span>
+                                </div>
+                                <div class="ticket-time-date">
+                                    <div>13:45</div>
+                                    <div class="ticket-small">19.11.20</div>
+                                </div>
+                                <div class="ticket-zhd-price">Від ₴ 375</div>
+                                <div class="ticket-zhd-type">Сидячий</div>
+                                <a href="#" class="ticket-choose-btn">Вибрати</a>
+                            </div>
+                            <div class="ticket-zhd">
+                                <img src="images/icons/ukrzaliz.svg">
+                                <div class="ticket-zhd-info">
+                                    <div>715К ІНТЕРСІТІ+</div>
+                                    <div class="ticket-small">Київ-Пасажирський → Львів</div>
+                                    <a href="#" class="change-search-btn route">Маршрут поїзда</a>
+                                </div>
+                                <div class="ticket-time-date">
+                                    <div>06:50</div>
+                                    <div class="ticket-small">19.11.20</div>
+                                </div>
+                                <div class="ticket-timeline">
+                                    <span>6 год. 55 хв.</span>
+                                </div>
+                                <div class="ticket-time-date">
+                                    <div>13:45</div>
+                                    <div class="ticket-small">19.11.20</div>
+                                </div>
+                                <div class="ticket-zhd-price">Від ₴ 375</div>
+                                <div class="ticket-zhd-type">Сидячий</div>
+                                <a href="#" class="ticket-choose-btn">Вибрати</a>
+                            </div>
+                            <div class="ticket-zhd">
+                                <img src="images/icons/ukrzaliz.svg">
+                                <div class="ticket-zhd-info">
+                                    <div>715К ІНТЕРСІТІ+</div>
+                                    <div class="ticket-small">Київ-Пасажирський → Львів</div>
+                                    <a href="#" class="change-search-btn route">Маршрут поїзда</a>
+                                </div>
+                                <div class="ticket-time-date">
+                                    <div>06:50</div>
+                                    <div class="ticket-small">19.11.20</div>
+                                </div>
+                                <div class="ticket-timeline">
+                                    <span>6 год. 55 хв.</span>
+                                </div>
+                                <div class="ticket-time-date">
+                                    <div>13:45</div>
+                                    <div class="ticket-small">19.11.20</div>
+                                </div>
+                                <div class="ticket-zhd-price">Від ₴ 375</div>
+                                <div class="ticket-zhd-type">Сидячий</div>
+                                <a href="#" class="ticket-choose-btn">Вибрати</a>
+                            </div>
+                            <div class="ticket-zhd">
+                                <img src="images/icons/ukrzaliz.svg">
+                                <div class="ticket-zhd-info">
+                                    <div>715К ІНТЕРСІТІ+</div>
+                                    <div class="ticket-small">Київ-Пасажирський → Львів</div>
+                                    <a href="#" class="change-search-btn route">Маршрут поїзда</a>
+                                </div>
+                                <div class="ticket-time-date">
+                                    <div>06:50</div>
+                                    <div class="ticket-small">19.11.20</div>
+                                </div>
+                                <div class="ticket-timeline">
+                                    <span>6 год. 55 хв.</span>
+                                </div>
+                                <div class="ticket-time-date">
+                                    <div>13:45</div>
+                                    <div class="ticket-small">19.11.20</div>
+                                </div>
+                                <div class="ticket-zhd-price">Від ₴ 375</div>
+                                <div class="ticket-zhd-type">Сидячий</div>
+                                <a href="#" class="ticket-choose-btn">Вибрати</a>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        
+        <footer class="tickets-footer">
+            <div class="apps">
+                <div class="apps-text">Доступно в</div>
+                <div class="app-block">
+                    <button href="#" class="app-btn google-play">
+                        <img src="images/icons/google play.svg">   
+                    </button>
+                    <button href="#" class="app-btn app-store">
+                        <img src="images/icons/apple.svg" > 
+                    </button>
+                </div>
+            </div>
+            <div class="footer-cols">
+                <div class="footer-block">
+                    <div class="logo-block">
+                        <a href="main.html" class="logo_link">
+                            <img src="images/icons/logo light.svg">
+                        </a>
+                    </div>
+                    <div class="social-media">
+                        <nav>
+                            <a href="#">
+                                <img src="images/icons/facebook.svg">                                                                
+                            </a>
+                            <a href="#">                          
+                                <img src="images/icons/instagram.svg"> 
+                            </a> 
+                            <a href="#">                              
+                                <img src="images/icons/telegram.svg">                                  
+                            </a>                         
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="columns">
+                    <div class="column">
+                        <ul>
+                            <li class="li-title">Послуги</li>
+                            <li><a href="#">Авіаквитки</a></li>
+                            <li><a href="#">Ж/Д квитки</a></li>
+                            <li><a href="#">Автобуси</a></li>
+                            <li><a href="#">Готелі</a></li>
+                            <li><a href="#">Авто</a></li>
+                        </ul>
+                    </div>
+        
+                    <div class="column">
+                        <ul>
+                            <li class="li-title">Більше</li>
+                            <li><a href="#">Про нас</a></li>
+                            <li><a href="#">Як працює сервіс</a></li>
+                            <li><a href="#">Чому обрати нас</a></li>
+                            <li><a href="#">Контакти</a></li>
+                        </ul>
+                    </div>
+        
+                    <div class="column">
+                        <ul>
+                            <li class="li-title">Сервіси</li>
+                            <li><a href="#">Рейтинг авіакомпаній</a></li>
+                            <li><a href="#">Порівняння цін</a></li>
+                            <li><a href="#">Розклад рейсів</a></li>
+                            <li><a href="#">Бонуси</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">&copy; Tickets.ua 2008-2020 Сервіс онлайн бронювання № ❶</div>
+        </footer>
+        </div>
+    </body>
+</html>

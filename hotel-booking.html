@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">        
+        <title>Tickets</title>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="styles/style.css">
+        <link rel="stylesheet" type="text/css" href="styles/media.css">
+        <script type="text/javascript" src="script/slider.js" defer></script>
+    </head>
+    
+    <body>
+        <div class="container">
+            <div class="background light">
+                <header>
+                    <a href="index.html" class="logo_link">
+                        <img src="images/icons/logo.svg">
+                    </a>
+                    <nav class="header-buttons account">
+                        <a href="user-profile.html" class="btn account-btn">
+                            <img src="images/icons/account but.svg">
+                        </a>
+                        <a href="#" class="menu"><img src="images/icons/menu dark.svg" onclick="menuPress()"></a>
+                        <div class="menu-block">
+                            <a href="#" class="close-btn">&times;</a>
+                            <a href="#" class="menu-btn">Авіаквитки</a>
+                            <a href="#" class="menu-btn">Залізничні квитки</a>
+                            <a href="#" class="menu-btn">Автобуси</a>
+                            <a href="#" class="menu-btn">Готелі</a>
+                            <a href="user-profile.html" class="btn account-btn inside_menu">
+                                <img src="images/icons/account but.svg">
+                            </a>
+                        </div>
+                    </nav>
+                </header>
+
+                <main>
+                    <div class="tickets-info booking">
+                        <img src="images/icons/Hotel.svg">
+                        <div class="search-info">
+                            <span>Київ</span>
+                            <span>19.11.2020/20.11.2020</span>
+                        </div>
+                        <a href="#" class="change-search-btn">Змінити умови пошуку</a>
+                    </div>
+                    <div class="background dark hotel">
+                        <div class="image-section">
+                            <div class="hotel-section">
+                                <div class="hotel-title">Premier Hotel Lybid</div>
+                            </div>
+                            <div class="img-hotel">
+                                <div class="Slides">
+                                    <div class="numbertext">1 / 6</div>
+                                    <img src="images/hotel.jpg" style="width:100%">
+                                </div>
+                                <div class="Slides">
+                                    <div class="numbertext">2 / 6</div>
+                                    <img src="images/hotel1.jpg" style="width:100%">
+                                </div>
+                                <div class="Slides">
+                                    <div class="numbertext">3 / 6</div>
+                                    <img src="images/hotel2.jpg" style="width:100%">
+                                </div>
+                                <div class="Slides">
+                                    <div class="numbertext">4 / 6</div>
+                                    <img src="images/hotel3.jpg" style="width:100%">
+                                </div>
+                                <div class="Slides">
+                                    <div class="numbertext">5 / 6</div>
+                                    <img src="images/hotel4.jpg" style="width:100%">
+                                </div>
+                                <div class="Slides">
+                                    <div class="numbertext">6 / 6</div>
+                                    <img src="images/hotel5.jpg" style="width:100%">
+                                </div>
+                                <a class="prev-btn" onclick="plusSlides(-1)">❮</a>
+                                <a class="next-btn" onclick="plusSlides(1)">❯</a>
+                                <div class="caption-container">
+                                    <p id="caption"></p>
+                                </div>
+                                <div class="row-2">
+                                    <div class="column-2">
+                                    <img class="demo cursor" src="images/hotel.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+                                    </div>
+                                    <div class="column-2">
+                                    <img class="demo cursor" src="images/hotel1.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+                                    </div>
+                                    <div class="column-2">
+                                    <img class="demo cursor" src="images/hotel2.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+                                    </div>
+                                    <div class="column-2">
+                                    <img class="demo cursor" src="images/hotel3.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+                                    </div>
+                                    <div class="column-2">
+                                    <img class="demo cursor" src="images/hotel4.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+                                    </div>    
+                                    <div class="column-2">
+                                    <img class="demo cursor" src="images/hotel5.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="client-type">
+                                <form method="post">
+                                    <div class="new-client booking">
+                                        <div class="client-type-heading">Вітаємо, Петров Іван!</div>
+                                        <div class="client-form">
+                                            <div class="form-group">
+                                                <input type="email"
+                                                        class="form-account"
+                                                        id="exampleInputEmail1"
+                                                        placeholder="Email"
+                                                        >
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="PhoneNumber"
+                                                        class="form-account"
+                                                        id="examplePhoneNumber"
+                                                        placeholder="Номер телефону"
+                                                        >
+                                            </div>
+                                            <div class="form-info">На зазначений у цьому полі email буде відправлений лист із підтвердженням бронювання</div>
+                                        </div>
+                                    </div>
+                                    <div class="passenger-data">
+                                        <div class="choice-heading">Номер 1</div>
+                                        <div class="choice-pass-info booking">2 дорослих</div>
+                                        <div class="avia-booking-form">
+                                            <div class="data-form">
+                                                <div class="form-group">
+                                                    <label>Тип номера</label>
+                                                    <select name="roomType" class="sex-select">
+                                                        <option value="male">Прем'єр Твін</option>
+                                                    </select>
+                                                </div>
+                                                <div class="guest">
+                                                    <div class="choice-pass-info booking">Гість 1</div>
+                                                    <div class="form-group">
+                                                        <label>Прізвище</label>
+                                                        <input type="lastName"
+                                                                class="form-account"
+                                                                placeholder="Петров"
+                                                                >
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Ім'я</label>
+                                                        <input type="firstName"
+                                                                class="form-account"
+                                                                placeholder="Іван"
+                                                                >
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Громадянство</label>
+                                                        <input type="nationality"
+                                                                class="form-account"
+                                                                placeholder="Україна"
+                                                                >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="checkout">
+                                        <div class="price">Ціна 540.00 UAH</div>
+                                        <input type="submit" value="Оплатити" class="pay-btn">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        
+            <footer class="tickets-footer">
+                <div class="apps">
+                    <div class="apps-text">Доступно в</div>
+                    <div class="app-block">
+                        <button href="#" class="app-btn google-play">
+                            <img src="images/icons/google play.svg">   
+                        </button>
+                        <button href="#" class="app-btn app-store">
+                            <img src="images/icons/apple.svg" > 
+                        </button>
+                    </div>
+                </div>
+                <div class="footer-cols">
+                    <div class="footer-block">
+                        <div class="logo-block">
+                            <a href="main.html" class="logo_link">
+                                <img src="images/icons/logo light.svg">
+                            </a>
+                        </div>
+                        <div class="social-media">
+                            <nav>
+                                <a href="#">
+                                    <img src="images/icons/facebook.svg">                                                                
+                                </a>
+                                <a href="#">                          
+                                    <img src="images/icons/instagram.svg"> 
+                                </a> 
+                                <a href="#">                              
+                                    <img src="images/icons/telegram.svg">                                  
+                                </a>                         
+                            </nav>
+                        </div>
+                    </div>
+
+                    <div class="columns">
+                        <div class="column">
+                            <ul>
+                                <li class="li-title">Послуги</li>
+                                <li><a href="#">Авіаквитки</a></li>
+                                <li><a href="#">Ж/Д квитки</a></li>
+                                <li><a href="#">Автобуси</a></li>
+                                <li><a href="#">Готелі</a></li>
+                                <li><a href="#">Авто</a></li>
+                            </ul>
+                        </div>
+            
+                        <div class="column">
+                            <ul>
+                                <li class="li-title">Більше</li>
+                                <li><a href="#">Про нас</a></li>
+                                <li><a href="#">Як працює сервіс</a></li>
+                                <li><a href="#">Чому обрати нас</a></li>
+                                <li><a href="#">Контакти</a></li>
+                            </ul>
+                        </div>
+            
+                        <div class="column">
+                            <ul>
+                                <li class="li-title">Сервіси</li>
+                                <li><a href="#">Рейтинг авіакомпаній</a></li>
+                                <li><a href="#">Порівняння цін</a></li>
+                                <li><a href="#">Розклад рейсів</a></li>
+                                <li><a href="#">Бонуси</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">&copy; Tickets.ua 2008-2020 Сервіс онлайн бронювання № ❶</div>
+                
+            </footer>
+
+        </div>
+    </body>
+</html>

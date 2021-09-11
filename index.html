@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">        
+        <title>Tickets</title>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="styles/style.css">
+        <link rel="stylesheet" type="text/css" href="styles/media.css">
+        <script type="text/javascript" src="script/script.js" defer></script>
+    </head>
+    
+    <body>
+        <div class="container">
+            <div class="main-picture">
+                <header>
+                    <a href="index.html" class="logo_link">
+                        <img src="images/icons/logo-white.svg">
+                    </a>
+                    <nav class="header-buttons">
+                        <a href="login.html" class="btn login-btn">Увійти</a>
+                        <a href="registration.html" class="btn sign-btn">Зареєструватися</a>
+                        <a href="#" class="menu"><img src="images/icons/menu.svg" onclick="menuPress()"></a>
+                        <div class="menu-block">
+                            <a href="#" class="close-btn" onclick="menuPress()">&times;</a>
+                            <a href="#" class="menu-btn">Авіаквитки</a>
+                            <a href="#" class="menu-btn">Залізничні квитки</a>
+                            <a href="#" class="menu-btn">Автобуси</a>
+                            <a href="#" class="menu-btn">Готелі</a>
+                            <a href="login.html" class="btn login-btn inside_menu">Увійти</a>
+                            <a href="registration.html" class="btn login-btn inside_menu">Зареєструватися</a>
+                        </div>
+                    </nav>
+                </header>
+
+                <main>
+                    <div class="title">Пошук і бронювання квитків для подорожі</div>
+                    <div class="search-section">
+                        <div class="nav-section">
+                            <button class="nav-link first active" onclick="openSearch(event,'avia')" id="default">Авіа</button>
+                            <button class="nav-link" onclick="openSearch(event,'zhd')">Ж/Д</button>
+                            <button class="nav-link" onclick="openSearch(event,'bus')">Автобуси</button>
+                            <button class="nav-link" id="last" onclick="openSearch(event,'hotel')">Готелі</button>
+                        </div>
+                        <div class="tab-content">
+                            <div id="avia" class="tabcontent active">
+                                <form>
+                                    <div class="form-destination">
+                                        <div class="input-field first-wrap">
+                                            <input class="search avia" id="search" name="dep" type="text" placeholder="Звідки">
+                                        </div>
+                                        <div class="icon-wrap">
+                                            <button class="reverse" type="button">
+                                                <img src="images/icons/reverse.svg" />
+                                            </button>                                               
+                                        </div>
+                                        <div class="input-field second-wrap">
+                                            <input class="destination avia" name="dep" id="destination" type="text" placeholder="Куди" />
+                                        </div>
+                                    </div>
+                                    <div class="input-field third-wrap">
+                                        <input class="form-control date" type="date" name="calendar" value="2020-06-01" max="2020-12-10" min="2020-10-26">
+                                    </div>
+                                    <div class="input-field fourth-wrap">
+                                        <input class="form-control date" type="date" name="calendar" value="2020-06-01" max="2020-12-10" min="2020-10-26">
+                                    </div>
+                                    <div class="input-field fifth-wrap">
+                                        <select data-trigger="" name="choices-single-defaul">
+                                          <option placeholder="">1 пасажир, будь-який</option>
+                                          <option>2 пасажира, будь-яких</option>
+                                          <option>3 пасажира, будь-яких</option>
+                                          <option>4 пасажира, будь-яких</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-field sixth-wrap">
+                                        <button class="btn-search" type="button">
+                                            <img style="width: 20px" src="images/icons/search.svg" /> 
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div id="zhd" class="tabcontent">
+                                <form>
+                                    <div class="form-destination">
+                                        <div class="input-field first-wrap">
+                                            <input class="search zhd" name="dep" id="search" type="text" placeholder="Звідки" />
+                                        </div>
+                                        <div class="icon-wrap">
+                                            <button class="reverse" type="button">
+                                                <img src="images/icons/reverse.svg" />
+                                            </button>    
+                                        </div>
+                                        <div class="input-field second-wrap">
+                                            <input class="destination zhd" name="dep"  id="destination" type="text" placeholder="Куди" />
+                                        </div>
+                                    </div>
+                                    <div class="input-field third-wrap">
+                                        <input class="form-control date" type="date" name="calendar" value="2020-06-01" max="2020-12-10" min="2020-10-26">
+                                    </div>
+                                    <div class="input-field fourth-wrap">
+                                        <input class="form-control date" type="date" name="calendar" value="2020-06-01" max="2020-12-10" min="2020-10-26">
+                                    </div>
+                                    <div class="input-field sixth-wrap">
+                                        <button class="btn-search" type="button">
+                                            <img style="width: 20px" src="images/icons/search.svg" /> 
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div id="bus" class="tabcontent">
+                                <form>
+                                    <div class="form-destination">
+                                        <div class="input-field first-wrap">
+                                            <input class="search bus" name="dep" id="search" type="text" placeholder="Звідки" />
+                                        </div>
+                                        <div class="icon-wrap">
+                                            <button class="reverse" type="button">
+                                                <img src="images/icons/reverse.svg" />
+                                            </button>      
+                                        </div>
+                                        <div class="input-field second-wrap">
+                                            <input class="destination bus" name="dep" id="destination" type="text" placeholder="Куди" />
+                                        </div>
+                                    </div>
+                                    <div class="input-field third-wrap">
+                                        <input class="form-control date" type="date" name="calendar" value="2020-06-01" max="2020-12-10" min="2020-10-26">
+                                    </div>
+                                    <div class="input-field sixth-wrap">
+                                        <button class="btn-search" type="button" >
+                                            <img style="width: 20px" src="images/icons/search.svg" />  
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div id="hotel" class="tabcontent">
+                                <form>
+                                    <div class="input-field first-wrap">
+                                        <input id="search" name="city"  type="text" placeholder="Місто" />
+                                    </div>
+                                    <div class="input-field third-wrap">
+                                        <input class="form-control date" type="date" name="calendar" value="2020-06-01" max="2020-12-10" min="2020-10-26">
+                                    </div>
+                                    <div class="input-field fourth-wrap">
+                                        <input class="form-control date" type="date" name="calendar" value="2020-06-01" max="2020-12-10" min="2020-10-26">
+                                    </div>
+                                    <div class="input-field fifth-wrap">
+                                        <select data-trigger="" name="choices-single-defaul" placeholder="Пасажири">
+                                          <option placeholder="">1 номер, 2 гостей</option>
+                                          <option>1 номер, 3 гостя</option>
+                                          <option>1 номер, 4 гостя</option>
+                                          <option>2 номера, 2 гостей</option>
+                                          <option>2 номера, 3 гостей</option>
+                                          <option>2 номера, 4 гостей</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-field sixth-wrap">
+                                        <button class="btn-search" type="button">
+                                            <img style="width: 20px" src="images/icons/search.svg" /> 
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="background-change grey">
+                <div class="slider-container">
+                    <div class="slider">
+                        <div class="slider-textcard active">
+                            <h3 class="card-title">Популярні напрямки</h3>
+                            <ul class="popular-dest">
+                                <li>
+                                    <a href="#" class="item">
+                                        <span>Київ → Нью-Йорк</span>
+                                        <button>від ₴ 5090</button>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="item">
+                                        <span>Київ → Нью-Йорк</span>
+                                        <button>від ₴ 5090</button>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="item">
+                                        <span>Київ → Нью-Йорк</span>
+                                        <button>від ₴ 5090</button>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="item">
+                                        <span>Київ → Нью-Йорк</span>
+                                        <button>від ₴ 5090</button>
+                                    </a>
+                                </li>
+                                <li class="last-child">
+                                    <a href="#" class="item">
+                                        <span>Київ → Нью-Йорк</span>
+                                        <button>від ₴ 5090</button>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="item">
+                                        <span>Київ → Нью-Йорк</span>
+                                        <button>від ₴ 5090</button>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="item">
+                                        <span>Київ → Нью-Йорк</span>
+                                        <button>від ₴ 5090</button>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="item">
+                                        <span>Київ → Нью-Йорк</span>
+                                        <button>від ₴ 5090</button>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="item">
+                                        <span>Київ → Нью-Йорк</span>
+                                        <button>від ₴ 5090</button>
+                                    </a>
+                                </li>
+                                <li class="last-child">
+                                    <a href="#" class="item">
+                                        <span>Київ → Нью-Йорк</span>
+                                        <button>від ₴ 5090</button>
+                                    </a>
+                                </li>
+                            </ul>
+                            <img src="images/slider 1.jpg" class="slider first">
+                        </div>
+                        <div class="slider-textcard">
+                            <h3 class="card-title">ТОП-5 авіакомпаній</h3>
+                            <ul class="top-avia">
+                                <li>
+                                    <div class="top-item">
+                                        <span>1</span>
+                                        <a href="#">Емірейтс</a>
+                                    </div>
+                                    <div class="rating">
+                                        <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0)">
+                                                <path d="M18.9503 6.90406C18.8252 6.53958 18.484 6.28153 18.0819 6.24706L12.5971 5.77533L10.4295 0.967631C10.2695 0.614414 9.90534 0.386444 9.50002 0.386444C9.09471 0.386444 8.73043 0.614414 8.57141 0.967631L6.4038 5.77533L0.918194 6.24706C0.516072 6.28222 0.175559 6.54026 0.0497331 6.90406C-0.0753682 7.26853 0.0401656 7.6683 0.344294 7.92099L4.49032 11.3651L3.26787 16.4659C3.17842 16.8409 3.33208 17.2288 3.66056 17.4537C3.83713 17.5753 4.04457 17.636 4.25273 17.636C4.43161 17.636 4.61064 17.5909 4.77053 17.5003L9.50002 14.8212L14.2286 17.5003C14.5755 17.6967 15.0117 17.6787 15.3395 17.4537C15.668 17.2288 15.8216 16.8409 15.7322 16.4659L14.5097 11.3651L18.6558 7.92099C18.9597 7.6683 19.0754 7.26936 18.9503 6.90406V6.90406Z" fill="#757251"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0">
+                                                    <rect width="19" height="18" fill="white"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>                                            
+                                        <span>4,7</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="top-item">
+                                        <span>2</span>
+                                        <a href="#">Емірейтс</a>
+                                    </div>
+                                    <div class="rating">
+                                        <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0)">
+                                                <path d="M18.9503 6.90406C18.8252 6.53958 18.484 6.28153 18.0819 6.24706L12.5971 5.77533L10.4295 0.967631C10.2695 0.614414 9.90534 0.386444 9.50002 0.386444C9.09471 0.386444 8.73043 0.614414 8.57141 0.967631L6.4038 5.77533L0.918194 6.24706C0.516072 6.28222 0.175559 6.54026 0.0497331 6.90406C-0.0753682 7.26853 0.0401656 7.6683 0.344294 7.92099L4.49032 11.3651L3.26787 16.4659C3.17842 16.8409 3.33208 17.2288 3.66056 17.4537C3.83713 17.5753 4.04457 17.636 4.25273 17.636C4.43161 17.636 4.61064 17.5909 4.77053 17.5003L9.50002 14.8212L14.2286 17.5003C14.5755 17.6967 15.0117 17.6787 15.3395 17.4537C15.668 17.2288 15.8216 16.8409 15.7322 16.4659L14.5097 11.3651L18.6558 7.92099C18.9597 7.6683 19.0754 7.26936 18.9503 6.90406V6.90406Z" fill="#757251"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0">
+                                                    <rect width="19" height="18" fill="white"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg> 
+                                        <span>4,7</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="top-item">
+                                        <span>3</span>
+                                        <a href="#">Емірейтс</a>
+                                    </div>
+                                    <div class="rating">
+                                        <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0)">
+                                                <path d="M18.9503 6.90406C18.8252 6.53958 18.484 6.28153 18.0819 6.24706L12.5971 5.77533L10.4295 0.967631C10.2695 0.614414 9.90534 0.386444 9.50002 0.386444C9.09471 0.386444 8.73043 0.614414 8.57141 0.967631L6.4038 5.77533L0.918194 6.24706C0.516072 6.28222 0.175559 6.54026 0.0497331 6.90406C-0.0753682 7.26853 0.0401656 7.6683 0.344294 7.92099L4.49032 11.3651L3.26787 16.4659C3.17842 16.8409 3.33208 17.2288 3.66056 17.4537C3.83713 17.5753 4.04457 17.636 4.25273 17.636C4.43161 17.636 4.61064 17.5909 4.77053 17.5003L9.50002 14.8212L14.2286 17.5003C14.5755 17.6967 15.0117 17.6787 15.3395 17.4537C15.668 17.2288 15.8216 16.8409 15.7322 16.4659L14.5097 11.3651L18.6558 7.92099C18.9597 7.6683 19.0754 7.26936 18.9503 6.90406V6.90406Z" fill="#757251"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0">
+                                                    <rect width="19" height="18" fill="white"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg> 
+                                        <span>4,7</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="top-item">
+                                        <span>4</span>
+                                        <a href="#">Емірейтс</a>
+                                    </div>
+                                    <div class="rating">
+                                        <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0)">
+                                                <path d="M18.9503 6.90406C18.8252 6.53958 18.484 6.28153 18.0819 6.24706L12.5971 5.77533L10.4295 0.967631C10.2695 0.614414 9.90534 0.386444 9.50002 0.386444C9.09471 0.386444 8.73043 0.614414 8.57141 0.967631L6.4038 5.77533L0.918194 6.24706C0.516072 6.28222 0.175559 6.54026 0.0497331 6.90406C-0.0753682 7.26853 0.0401656 7.6683 0.344294 7.92099L4.49032 11.3651L3.26787 16.4659C3.17842 16.8409 3.33208 17.2288 3.66056 17.4537C3.83713 17.5753 4.04457 17.636 4.25273 17.636C4.43161 17.636 4.61064 17.5909 4.77053 17.5003L9.50002 14.8212L14.2286 17.5003C14.5755 17.6967 15.0117 17.6787 15.3395 17.4537C15.668 17.2288 15.8216 16.8409 15.7322 16.4659L14.5097 11.3651L18.6558 7.92099C18.9597 7.6683 19.0754 7.26936 18.9503 6.90406V6.90406Z" fill="#757251"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0">
+                                                    <rect width="19" height="18" fill="white"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg> 
+                                        <span>4,7</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="top-item">
+                                        <span>5</span>
+                                        <a href="#">Емірейтс</a>
+                                    </div>
+                                    <div class="rating">
+                                        <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0)">
+                                                <path d="M18.9503 6.90406C18.8252 6.53958 18.484 6.28153 18.0819 6.24706L12.5971 5.77533L10.4295 0.967631C10.2695 0.614414 9.90534 0.386444 9.50002 0.386444C9.09471 0.386444 8.73043 0.614414 8.57141 0.967631L6.4038 5.77533L0.918194 6.24706C0.516072 6.28222 0.175559 6.54026 0.0497331 6.90406C-0.0753682 7.26853 0.0401656 7.6683 0.344294 7.92099L4.49032 11.3651L3.26787 16.4659C3.17842 16.8409 3.33208 17.2288 3.66056 17.4537C3.83713 17.5753 4.04457 17.636 4.25273 17.636C4.43161 17.636 4.61064 17.5909 4.77053 17.5003L9.50002 14.8212L14.2286 17.5003C14.5755 17.6967 15.0117 17.6787 15.3395 17.4537C15.668 17.2288 15.8216 16.8409 15.7322 16.4659L14.5097 11.3651L18.6558 7.92099C18.9597 7.6683 19.0754 7.26936 18.9503 6.90406V6.90406Z" fill="#757251"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0">
+                                                    <rect width="19" height="18" fill="white"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg> 
+                                        <span>4,7</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <img src="images/slider 2.jpg" class="slider second">
+                        </div>
+                    </div>
+                    <nav class="slider-nav">
+                        <ul>
+                        <li class="arrow">
+                            <button class="previous" onclick="showPreviousItem()">
+                                <span>
+                                    <img src="images/icons/previous.svg" />                                                                       
+                                </span>
+                            </button>
+                        </li>
+                        <li class="arrow">
+                            <button class="next" onclick="showNextItem()">
+                                <span>                                  
+                                    <img src="images/icons/next.svg" />
+                                </span>
+                            </button>
+                        </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="background-change yellow"> 
+                    <div class="buttons">
+                        <div class="button-inside">
+                            <a href="#" class="button-container">
+                                <img src="images/icons/credit.svg">
+                                <div class="button-text">
+                                    <div class="button-title">КВИТКИ В КРЕДИТ</div>
+                                    <div class="button-desc">Відпочивай зараз - плати потім.</div>
+                                </div>
+                                <button class="button-more">Дізнатися більше</button>
+                            </a>
+                        </div>
+                        <div class="button-inside">
+                            <a href="#" class="button-container">
+                                <img src="images/icons/bonus.svg">                                                              
+                                <div class="button-text">
+                                    <div class="button-title">БОНУСНА ПРОГРАМА</div>
+                                    <div class="button-desc">Подорожі зі знижкою.</div>
+                                </div>
+                                <button class="button-more">Отримати бонуси</button>
+                            </a>
+                        </div>
+                    </div>
+                <div class="services">
+                    <h3 class="card-title">Сервіси для мандрівників</h3>
+                    <div class="service-cards">
+                        <a href="#" class="card_img">
+                            <div class="card_img_block">
+                                <img src="images/service 1.PNG">
+                                <img src="images/service 1 hover.PNG" class="onhover">
+                            </div>
+                            <div class="card-name">Розклад літаків</div>
+                            <div class="card-desc">Відправлення зі всіх аеропортів світу.</div>
+                        </a>
+                        <a href="#" class="card_img">
+                            <div class="card_img_block">
+                                <img src="images/service 2.PNG" >
+                                <img src="images/service 2 hover.PNG" class="onhover">
+                            </div>
+                            <div class="card-name">Дешеві авіаквитки</div>
+                            <div class="card-desc">Динаміка цін на авіаперельоти.</div>
+                        </a>
+                        <a href="#" class="card_img">
+                            <div class="card_img_block">
+                                <img src="images/service 3.PNG" >
+                                <img src="images/service 3 hover.PNG" class="onhover">
+                            </div>
+                            <div class="card-name">Допомога мандрівникам</div>
+                            <div class="card-desc">Відповіді на найпопулярніші питання.</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="subscribe">
+                <div class="subscribe-text-block">
+                    <div class="subscribe-title">Найкращі пропозиції для подорожей</div>
+                    <label for="Subscribe">Підписатися</label>
+                    <form>
+                        <input type="text" class="form-control is-valid" id="email" placeholder="E-mail">
+                        <button class="search-btn" type="submit">
+                            <img style="width: auto" src="images/icons/arrow-subscribe.svg" />                                 
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="support">
+                <img src="images/support.PNG">
+            </div>
+        </main>
+        
+        <footer>
+            <div class="apps">
+                <div class="apps-text">Доступно в</div>
+                <div class="app-block">
+                    <button href="#" class="app-btn google-play">
+                        <img src="images/icons/google play.svg">   
+                    </button>
+                    <button href="#" class="app-btn app-store">
+                        <img src="images/icons/apple.svg" > 
+                    </button>
+                </div>
+            </div>
+            <div class="footer-cols">
+                <div class="footer-block">
+                    <div class="logo-block">
+                        <a href="main.html" class="logo_link">
+                            <img src="images/icons/logo light.svg">
+                        </a>
+                    </div>
+                    <div class="social-media">
+                        <nav>
+                            <a href="#">
+                                <img src="images/icons/facebook.svg">                                                                
+                            </a>
+                            <a href="#">                          
+                                <img src="images/icons/instagram.svg"> 
+                            </a> 
+                            <a href="#">                              
+                                <img src="images/icons/telegram.svg">                                  
+                            </a>                         
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="columns">
+                    <div class="column">
+                        <ul>
+                            <li class="li-title">Послуги</li>
+                            <li><a href="#">Авіаквитки</a></li>
+                            <li><a href="#">Ж/Д квитки</a></li>
+                            <li><a href="#">Автобуси</a></li>
+                            <li><a href="#">Готелі</a></li>
+                            <li><a href="#">Авто</a></li>
+                        </ul>
+                    </div>
+        
+                    <div class="column">
+                        <ul>
+                            <li class="li-title">Більше</li>
+                            <li><a href="#">Про нас</a></li>
+                            <li><a href="#">Як працює сервіс</a></li>
+                            <li><a href="#">Чому обрати нас</a></li>
+                            <li><a href="#">Контакти</a></li>
+                        </ul>
+                    </div>
+        
+                    <div class="column">
+                        <ul>
+                            <li class="li-title">Сервіси</li>
+                            <li><a href="#">Рейтинг авіакомпаній</a></li>
+                            <li><a href="#">Порівняння цін</a></li>
+                            <li><a href="#">Розклад рейсів</a></li>
+                            <li><a href="#">Бонуси</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">&copy; Tickets.ua 2008-2020 Сервіс онлайн бронювання № ❶</div>
+            
+        </footer>
+
+        </div>
+    </body>
+</html>
