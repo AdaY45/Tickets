@@ -2,13 +2,10 @@ const tabcontent = document.getElementsByClassName("tabcontent");
 const tablinks = document.getElementsByClassName("nav-link");
 const items = document.getElementsByClassName("slider-textcard");
 const itemCount = items.length;
-const nextItem = document.querySelector('.next');
-const previousItem = document.querySelector('.previous');
 let count = 0;
 const menu = document.querySelector(".menu");
 const menuBlock = document.querySelector(".menu-block");
 const menuItems = document.getElementsByClassName("menu-btn");
-const cancel = document.querySelector(".close-btn");
 
 
 function openSearch(evt,element) {
@@ -91,10 +88,4 @@ function menuPress() {
   }
 }
 
-//document.getElementById("default").click();
-//document.getElementById("default2").click();
-//menu.addEventListener('click',menuPress);
-//cancel.addEventListener('click',menuPress);
-//nextItem.addEventListener('click', showNextItem);
-//previousItem.addEventListener('click', showPreviousItem);
 document.addEventListener('keydown', keyPress);

@@ -227,7 +227,7 @@ header {
     cursor: pointer;
     border: none;
     outline: none;
-    padding: 20px 30px 15px;
+    padding: 24px 30px 19px;
     background: #F4E8C1;
     border-radius: 25px;
 }
@@ -408,12 +408,14 @@ header {
 
 .slider-textcard img {
     -webkit-animation: showRightSlider 0.8s;
+    -moz-animation: showRightSlider 0.8s;
           animation: showRightSlider 0.8s;
 }
 
 .slider-textcard ul {
     z-index: 1;
     -webkit-animation: showLeftSlider 0.8s;
+    -moz-animation: showLeftSlider 0.8s;
           animation: showLeftSlider 0.8s;
 }
 
@@ -451,6 +453,28 @@ header {
 }
 
 @-webkit-keyframes showRightSlider {
+    from {
+        opacity: 0;
+        transform: translateX(200%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@-moz-keyframes showLeftSlider {
+    from {
+        opacity: 0;
+        transform: translateX(-200%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@-moz-keyframes showRightSlider {
     from {
         opacity: 0;
         transform: translateX(200%);
